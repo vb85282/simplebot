@@ -5,7 +5,9 @@ const builder = require("botbuilder");
 require('dotenv').config();
 const restify = require('restify');
 
-//define the Bot Services bot connector
+//Define the Bot Services bot connector
+//The Connector facilitates communication between bot and user 
+//by relaying messages from bot to channel and from channel to bot
 const connector = new builder.ChatConnector({
     appId: process.env.MICROSOFT_APP_ID,
     appPassword: process.env.MICROSOFT_APP_PASSWORD
