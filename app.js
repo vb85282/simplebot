@@ -24,9 +24,9 @@ var inMemoryStorage = new builder.MemoryBotStorage();
 //set Connector to Bot Services as first argument
 //set the default dialog as second argument.
 //note: the second argument can exist without an array
-var bot = new builder.UniversalBot(connector , function(session){
+var bot = new builder.UniversalBot(connector , [function(session){
     session.send('ECHO ' + session.message.text);
-});
+}]);
 bot.set('storage', inMemoryStorage);
 //https://docs.microsoft.com/en-us/azure/bot-service/nodejs/bot-builder-nodejs-dialog-overview?view=azure-bot-service-3.0
 /* -------------End METHOD 1-------------*/
